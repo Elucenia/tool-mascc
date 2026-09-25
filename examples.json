@@ -1,0 +1,80 @@
+[
+  {
+    "label": "Sintomas leves, sem outros fatores, 55 anos, ambulatorial: 26 pontos",
+    "input": {
+      "carga": "5",
+      "hipotensao": "5",
+      "dpoc": "4",
+      "tumor": "4",
+      "desidratacao": "3",
+      "local": "3",
+      "idade": "2"
+    },
+    "expected": {
+      "score": 26,
+      "level": "low"
+    },
+    "originalInput": {
+      "carga": "5",
+      "hipotensao": "5",
+      "dpoc": "4",
+      "tumor": "4",
+      "desidratacao": "3",
+      "local": "3",
+      "idade": "2"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Corte: sintomas moderados, febre na internação, &lt; 60 anos: 3+5+4+4+3+0+2 = 21",
+    "input": {
+      "carga": "3",
+      "hipotensao": "5",
+      "dpoc": "4",
+      "tumor": "4",
+      "desidratacao": "3",
+      "local": "0",
+      "idade": "2"
+    },
+    "expected": {
+      "score": 21,
+      "level": "low"
+    },
+    "originalInput": {
+      "carga": "3",
+      "hipotensao": "5",
+      "dpoc": "4",
+      "tumor": "4",
+      "desidratacao": "3",
+      "local": "0",
+      "idade": "2"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Sintomas moderados, hipotenso, 70 anos: 3+0+4+4+3+3+0 = 17",
+    "input": {
+      "carga": "3",
+      "hipotensao": "0",
+      "dpoc": "4",
+      "tumor": "4",
+      "desidratacao": "3",
+      "local": "3",
+      "idade": "0"
+    },
+    "expected": {
+      "score": 17,
+      "level": "high"
+    },
+    "originalInput": {
+      "carga": "3",
+      "hipotensao": "0",
+      "dpoc": "4",
+      "tumor": "4",
+      "desidratacao": "3",
+      "local": "3",
+      "idade": "0"
+    },
+    "expandedZeroOptions": []
+  }
+]

@@ -1,0 +1,285 @@
+{
+  "tool": {
+    "id": "mascc",
+    "title": "Índice MASCC",
+    "short": "Baixo risco na neutropenia febril",
+    "desc": "Índice MASCC para neutropenia febril em pacientes com câncer: 21 pontos ou mais identificam baixo risco de complicações graves.",
+    "lead": "Identifica, no adulto com câncer e neutropenia febril, quem tem baixo risco de complicações graves e pode ser candidato a antibiótico oral e manejo ambulatorial.",
+    "spec": [
+      "oncologia-clinica",
+      "hematologia-e-hemoterapia",
+      "infectologia",
+      "medicina-de-emergencia"
+    ],
+    "tier": 1,
+    "fields": [
+      [
+        "carga",
+        "Carga da doença (sintomas do episódio febril)",
+        "radio",
+        {
+          "opts": {
+            "0": "Graves ou moribundo",
+            "3": "Moderados",
+            "5": "Nenhum ou leves"
+          }
+        }
+      ],
+      [
+        "hipotensao",
+        "Hipotensão (PAS &lt; 90 mmHg)",
+        "radio",
+        {
+          "opts": {
+            "0": "Sim",
+            "5": "Não"
+          }
+        }
+      ],
+      [
+        "dpoc",
+        "DPOC ativa",
+        "radio",
+        {
+          "opts": {
+            "0": "Sim",
+            "4": "Não"
+          }
+        }
+      ],
+      [
+        "tumor",
+        "Tipo de câncer",
+        "radio",
+        {
+          "opts": {
+            "0": "Hematológico com infecção fúngica prévia",
+            "4": "Tumor sólido, ou hematológico sem infecção fúngica prévia"
+          }
+        }
+      ],
+      [
+        "desidratacao",
+        "Desidratação que exige hidratação venosa",
+        "radio",
+        {
+          "opts": {
+            "0": "Sim",
+            "3": "Não"
+          }
+        }
+      ],
+      [
+        "local",
+        "Onde começou a febre",
+        "radio",
+        {
+          "opts": {
+            "0": "Durante internação",
+            "3": "Ambulatorial"
+          }
+        }
+      ],
+      [
+        "idade",
+        "Idade",
+        "radio",
+        {
+          "opts": {
+            "0": "≥ 60 anos",
+            "2": "&lt; 60 anos"
+          }
+        }
+      ]
+    ],
+    "score": {
+      "label": "Índice MASCC",
+      "unit": "de 26",
+      "bands": [
+        [
+          0,
+          "high",
+          "Não é baixo risco (&lt; 21 pontos)",
+          "Internar e iniciar antibiótico venoso de amplo espectro."
+        ],
+        [
+          21,
+          "low",
+          "Baixo risco (≥ 21 pontos)",
+          "Candidato a antibiótico oral e manejo ambulatorial, se também preencher os critérios clínicos e sociais."
+        ]
+      ]
+    },
+    "formula": "<p>Carga da doença: nenhum/leve 5, moderado 3, grave 0 · sem hipotensão 5 · sem DPOC 4 · tumor sólido ou hematológico sem infecção fúngica prévia 4 · sem desidratação 3 · paciente ambulatorial 3 · idade &lt; 60 anos 2. Máximo: 26.</p>",
+    "table": [
+      [
+        "Pontos",
+        "Risco",
+        "Conduta sugerida"
+      ],
+      [
+        "≥ 21",
+        "Baixo",
+        "Considerar antibiótico oral e manejo ambulatorial"
+      ],
+      [
+        "&lt; 21",
+        "Não baixo",
+        "Internação e antibiótico venoso"
+      ]
+    ],
+    "table_note": "Na validação, o ponto de corte de 21 teve valor preditivo positivo de 91% para baixo risco, sensibilidade de 71% e especificidade de 68%.",
+    "tips": [
+      "A \"carga da doença\" refere-se ao estado geral no episódio febril, não ao estádio do câncer.",
+      "O MASCC não basta sozinho: para alta, o paciente precisa estar estável, tolerar a via oral, morar perto, ter cuidador e acesso rápido ao serviço (ASCO/IDSA).",
+      "Leucemia aguda em indução, neutropenia prevista por mais de 7 dias ou infecção de foco evidente (pneumonia, cateter, celulite extensa) pedem internação mesmo com escore alto.",
+      "Antibiótico empírico na primeira hora vale para todos: o escore decide o local e a via, não o momento."
+    ],
+    "sources": [
+      [
+        "Klastersky J et al. The Multinational Association for Supportive Care in Cancer risk index: a multinational scoring system for identifying low-risk febrile neutropenic cancer patients. J Clin Oncol, 2000.",
+        "https://doi.org/10.1200/JCO.2000.18.16.3038"
+      ],
+      [
+        "Taplitz RA et al. Outpatient management of fever and neutropenia in adults treated for malignancy: American Society of Clinical Oncology and Infectious Diseases Society of America clinical practice guideline update. J Clin Oncol, 2018.",
+        "https://doi.org/10.1200/JCO.2017.77.6211"
+      ]
+    ],
+    "cases": [
+      [
+        "Sintomas leves, sem outros fatores, 55 anos, ambulatorial: 26 pontos",
+        {
+          "carga": "5",
+          "hipotensao": "5",
+          "dpoc": "4",
+          "tumor": "4",
+          "desidratacao": "3",
+          "local": "3",
+          "idade": "2"
+        },
+        {
+          "score": 26,
+          "level": "low"
+        }
+      ],
+      [
+        "Corte: sintomas moderados, febre na internação, &lt; 60 anos: 3+5+4+4+3+0+2 = 21",
+        {
+          "carga": "3",
+          "hipotensao": "5",
+          "dpoc": "4",
+          "tumor": "4",
+          "desidratacao": "3",
+          "local": "0",
+          "idade": "2"
+        },
+        {
+          "score": 21,
+          "level": "low"
+        }
+      ],
+      [
+        "Sintomas moderados, hipotenso, 70 anos: 3+0+4+4+3+3+0 = 17",
+        {
+          "carga": "3",
+          "hipotensao": "0",
+          "dpoc": "4",
+          "tumor": "4",
+          "desidratacao": "3",
+          "local": "3",
+          "idade": "0"
+        },
+        {
+          "score": 17,
+          "level": "high"
+        }
+      ]
+    ],
+    "batch": "onco-diagnostico",
+    "kind": "Escore",
+    "config": {
+      "unit": "de 26",
+      "label": "Índice MASCC",
+      "fields": [
+        [
+          "carga",
+          "radio",
+          0
+        ],
+        [
+          "hipotensao",
+          "radio",
+          0
+        ],
+        [
+          "dpoc",
+          "radio",
+          0
+        ],
+        [
+          "tumor",
+          "radio",
+          0
+        ],
+        [
+          "desidratacao",
+          "radio",
+          0
+        ],
+        [
+          "local",
+          "radio",
+          0
+        ],
+        [
+          "idade",
+          "radio",
+          0
+        ]
+      ],
+      "bands": [
+        [
+          0,
+          "high",
+          "Não é baixo risco (&lt; 21 pontos)",
+          "Internar e iniciar antibiótico venoso de amplo espectro."
+        ],
+        [
+          21,
+          "low",
+          "Baixo risco (≥ 21 pontos)",
+          "Candidato a antibiótico oral e manejo ambulatorial, se também preencher os critérios clínicos e sociais."
+        ]
+      ]
+    },
+    "areaId": "onco-diagnostico",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/onco-diagnostico.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 3,
+      "passed": 3,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "not-tested",
+      "testedAt": null,
+      "total": 0,
+      "passed": 0,
+      "cases": []
+    }
+  },
+  "review": {
+    "status": "needs-review",
+    "reason": "Revisão documental e clínica independente pendente.",
+    "clinicalValidation": "not-performed"
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/onco-diagnostico.php",
+    "sha256": "29e7fd6aab1f8bf937a34267255855c21f804696da2b4817d6197578cdcbe743",
+    "bytes": 78570
+  },
+  "clinicalValidation": "not-performed"
+}
