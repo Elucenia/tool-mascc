@@ -1,9 +1,11 @@
-/* ELUCENIA standalone integration. Source package metadata and rights: README.md. */
+/* tool-mascc · Elucenia · https://github.com/Elucenia/tool-mascc
+   Copyright (c) 2026 Elucenia · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
+   Standalone integration. Package metadata and rights: README.md. */
 (function(root){'use strict';
 function freeze(value){if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 const TOOL=freeze({"id":"mascc","title":"Índice MASCC","fields":[["carga","Carga da doença (sintomas do episódio febril)","radio",{"opts":{"0":"Graves ou moribundo","3":"Moderados","5":"Nenhum ou leves"}}],["hipotensao","Hipotensão (PAS &lt; 90 mmHg)","radio",{"opts":{"0":"Sim","5":"Não"}}],["dpoc","DPOC ativa","radio",{"opts":{"0":"Sim","4":"Não"}}],["tumor","Tipo de câncer","radio",{"opts":{"0":"Hematológico com infecção fúngica prévia","4":"Tumor sólido, ou hematológico sem infecção fúngica prévia"}}],["desidratacao","Desidratação que exige hidratação venosa","radio",{"opts":{"0":"Sim","3":"Não"}}],["local","Onde começou a febre","radio",{"opts":{"0":"Durante internação","3":"Ambulatorial"}}],["idade","Idade","radio",{"opts":{"0":"≥ 60 anos","2":"&lt; 60 anos"}}]],"config":{"unit":"de 26","label":"Índice MASCC","fields":[["carga","radio",0],["hipotensao","radio",0],["dpoc","radio",0],["tumor","radio",0],["desidratacao","radio",0],["local","radio",0],["idade","radio",0]],"bands":[[0,"high","Não é baixo risco (&lt; 21 pontos)","Internar e iniciar antibiótico venoso de amplo espectro."],[21,"low","Baixo risco (≥ 21 pontos)","Candidato a antibiótico oral e manejo ambulatorial, se também preencher os critérios clínicos e sociais."]]},"reviewStatus":"needs-review","clinicalValidation":"not-performed"});
 const window={};
-/* ELUCENIA arithmetic registry. No DOM access, storage, telemetry or network requests. */
+/* Elucenia arithmetic registry. No DOM access, storage, telemetry or network requests. */
 (function(root){
   'use strict';
   const CALC={fn:Object.create(null)};
