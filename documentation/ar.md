@@ -1,0 +1,109 @@
+<!-- ELUCENIA technical documentation · mascc · ar · no clinical/professional/rights approval -->
+
+# مؤشر MASCC
+
+[الشروط والمصادر والأذونات](https://elucenia.org/ar/tools/mascc)
+
+## كيفية الاستخدام
+
+استخدم الأداة في البوابة أو افتح index.html عبر خادم HTTP محلي. اختر اللغة، وأكمل الحقول، ثم أجرِ الحساب.
+
+## المدخلات والوحدات
+
+### عبء المرض (أعراض النوبة الحموية)
+
+`carga`
+
+- `0` — شديدة أو في حالة احتضار
+- `3` — متوسّطة
+- `5` — لا شيء أو خفيفة
+
+### انخفاض الضغط (الضغط الانقباضي \< ٩٠ mmHg)
+
+`hipotensao`
+
+- `0` — نعم
+- `5` — لا
+
+### داء الانسداد الرئوي المزمن النشط
+
+`dpoc`
+
+- `0` — نعم
+- `4` — لا
+
+### نوع السرطان
+
+`tumor`
+
+- `0` — ورم دموي مع عدوى فطرية سابقة
+- `4` — ورم صلب أو ورم دموي دون عدوى فطرية سابقة
+
+### تجفاف يتطلب سوائل وريدية
+
+`desidratacao`
+
+- `0` — نعم
+- `3` — لا
+
+### مكان بدء الحمى
+
+`local`
+
+- `0` — أثناء الإقامة بالمستشفى
+- `3` — في العيادات الخارجية
+
+### العمر
+
+`idade`
+
+- `0` — ≥ ٦٠ سنوات
+- `2` — \< ٦٠ سنوات
+
+## إصدار الطريقة
+
+MASCC/كلاسترسكي 2000: 7 مجالات، 0–26، حد ≥21؛ سياق ASCO/IDSA 2018
+
+## المعادلة الموثقة
+
+عبء المرض: معدوم/خفيف 5، متوسط 3، شديد 0 · بلا انخفاض ضغط 5 · بلا انسداد رئوي مزمن 4 · ورم صلب 4، أو ورم خبيث دموي من دون عدوى فطرية سابقة 4 · بلا تجفاف 3 · مريض خارجي 3 · العمر \<60 سنة 2. الحد الأقصى 26.
+
+## الحدود والفئة السكانية
+
+تشير قيمة MASCC ≥21 إلى خطر أقل للمضاعفات، لكنها لا تجيز وحدها الخروج من المستشفى أو المضاد الحيوي الفموي أو التدبير خارج المستشفى. في سياق ASCO/IDSA 2018، يعتمد الاختيار على التقييم السريري والاستقرار والأمراض المصاحبة والقدرة على الالتزام بالمراجعات، مع وجود مقدم رعاية في المنزل وهاتف ووسيلة نقل. يجب مراقبة المرشحين للتدبير خارج المستشفى لمدة لا تقل عن 4 ساعات قبل الخروج، ويحتاجون إلى متابعة. يتبع معيار انخفاض الضغط في هذا التنفيذ المتغير الأصلي لعام 2000: ضغط الدم الانقباضي \<90 mmHg.
+
+## المراجع
+
+- [Klastersky J et al. The Multinational Association for Supportive Care in Cancer risk index: a multinational scoring system for identifying low-risk febrile neutropenic cancer patients. J Clin Oncol, 2000.](https://doi.org/10.1200/JCO.2000.18.16.3038)
+
+- [Taplitz RA et al. Outpatient management of fever and neutropenia in adults treated for malignancy: American Society of Clinical Oncology and Infectious Diseases Society of America clinical practice guideline update. J Clin Oncol, 2018.](https://doi.org/10.1200/JCO.2017.77.6211)
+
+- [ASCO/IDSA2018;DOI10.1200/JCO.2017.77.6211](https://www.idsociety.org/globalassets/idsa/practice-guidelines/outpatient-management-of-fever-and-neutropenia.pdf)
+
+- [Original Klastersky2000;DOI10.1200/JCO.2000.18.16.3038](https://theempulse.org/wp-content/uploads/2016/04/The-Multinational-Association-for-Supportive-care-in-cancer-risk-index.pdf)
+
+## إعادة إجراء الاختبارات التقنية
+
+شغّل node test.cjs في المجلد الجذري لهذا المستودع لتكرار الحالات الاصطناعية المسجلة. تُحفظ المدخلات والنتائج المتوقعة وحدود التفاوت الأصلية. لا تُعدّ الاختبارات التقنية تحققًا سريريًا.
+
+```sh
+node test.cjs
+```
+
+يحتوي tool.json على المصادر والإصدار ونطاق المراجعة. يحتفظ examples.json بالمدخلات والنتائج المتوقعة للحالات الاصطناعية؛ ويسجل results.json النتائج التي تم الحصول عليها.
+
+[السجل والمراجع](../tool.json) · [شيفرة JavaScript](../calculator.js) · [حالات مرجعية](../examples.json) · [results.json](../results.json)
+
+## المراجعة وشروط الاستخدام
+
+لم تُجرَ مراجعة سريرية مستقلة.
+
+هذه الواجهة ترجمة أعدّها مؤلفوها، وليست إصدارًا رسميًا أو معتمدًا. لم تُجرَ مراجعة سريرية مستقلة أو مراجعة لغوية مهنية، ولم تُستكمل الموافقة على حقوق استخدام الأدوات.
+
+نتيجة المعادلة أو التصنيف. يعتمد التفسير والتصرف ومدى الانطباق على التقييم المهني والمصدر المحدد.
+
+## الترخيص ونسبة العمل إلى أصحابه
+
+ينطبق Apache-2.0 على كود ELUCENIA فقط. تبقى حقوق الأدوات والمنشورات والترجمات والبيانات لأصحابها المعنيين. احتفظ بملفّي LICENSE وNOTICE.
+
+ELUCENIA · Felipe Guedes · Copyright © 2026

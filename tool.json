@@ -5,13 +5,13 @@
     "short": "Baixo risco na neutropenia febril",
     "desc": "Índice MASCC para neutropenia febril em pacientes com câncer: 21 pontos ou mais identificam baixo risco de complicações graves.",
     "lead": "Identifica, no adulto com câncer e neutropenia febril, quem tem baixo risco de complicações graves e pode ser candidato a antibiótico oral e manejo ambulatorial.",
+    "kind": "Escore",
     "spec": [
       "oncologia-clinica",
       "hematologia-e-hemoterapia",
       "infectologia",
       "medicina-de-emergencia"
     ],
-    "tier": 1,
     "fields": [
       [
         "carga",
@@ -92,49 +92,7 @@
         }
       ]
     ],
-    "score": {
-      "label": "Índice MASCC",
-      "unit": "de 26",
-      "bands": [
-        [
-          0,
-          "high",
-          "Não é baixo risco (&lt; 21 pontos)",
-          "Internar e iniciar antibiótico venoso de amplo espectro."
-        ],
-        [
-          21,
-          "low",
-          "Baixo risco (≥ 21 pontos)",
-          "Candidato a antibiótico oral e manejo ambulatorial, se também preencher os critérios clínicos e sociais."
-        ]
-      ]
-    },
-    "formula": "<p>Carga da doença: nenhum/leve 5, moderado 3, grave 0 · sem hipotensão 5 · sem DPOC 4 · tumor sólido ou hematológico sem infecção fúngica prévia 4 · sem desidratação 3 · paciente ambulatorial 3 · idade &lt; 60 anos 2. Máximo: 26.</p>",
-    "table": [
-      [
-        "Pontos",
-        "Risco",
-        "Conduta sugerida"
-      ],
-      [
-        "≥ 21",
-        "Baixo",
-        "Considerar antibiótico oral e manejo ambulatorial"
-      ],
-      [
-        "&lt; 21",
-        "Não baixo",
-        "Internação e antibiótico venoso"
-      ]
-    ],
-    "table_note": "Na validação, o ponto de corte de 21 teve valor preditivo positivo de 91% para baixo risco, sensibilidade de 71% e especificidade de 68%.",
-    "tips": [
-      "A \"carga da doença\" refere-se ao estado geral no episódio febril, não ao estádio do câncer.",
-      "O MASCC não basta sozinho: para alta, o paciente precisa estar estável, tolerar a via oral, morar perto, ter cuidador e acesso rápido ao serviço (ASCO/IDSA).",
-      "Leucemia aguda em indução, neutropenia prevista por mais de 7 dias ou infecção de foco evidente (pneumonia, cateter, celulite extensa) pedem internação mesmo com escore alto.",
-      "Antibiótico empírico na primeira hora vale para todos: o escore decide o local e a via, não o momento."
-    ],
+    "formula": "<p>Carga da doença: nenhum/leve 5, moderado 3, grave 0 · sem hipotensão 5 · sem DPOC 4 · tumor sólido 4, ou tumor hematológico sem infecção fúngica prévia 4 · sem desidratação 3 · paciente ambulatorial 3 · idade &lt; 60 anos 2. Máximo: 26.</p>",
     "sources": [
       [
         "Klastersky J et al. The Multinational Association for Supportive Care in Cancer risk index: a multinational scoring system for identifying low-risk febrile neutropenic cancer patients. J Clin Oncol, 2000.",
@@ -143,6 +101,14 @@
       [
         "Taplitz RA et al. Outpatient management of fever and neutropenia in adults treated for malignancy: American Society of Clinical Oncology and Infectious Diseases Society of America clinical practice guideline update. J Clin Oncol, 2018.",
         "https://doi.org/10.1200/JCO.2017.77.6211"
+      ],
+      [
+        "ASCO/IDSA2018;DOI10.1200/JCO.2017.77.6211",
+        "https://www.idsociety.org/globalassets/idsa/practice-guidelines/outpatient-management-of-fever-and-neutropenia.pdf"
+      ],
+      [
+        "Original Klastersky2000;DOI10.1200/JCO.2000.18.16.3038",
+        "https://theempulse.org/wp-content/uploads/2016/04/The-Multinational-Association-for-Supportive-care-in-cancer-risk-index.pdf"
       ]
     ],
     "cases": [
@@ -195,63 +161,6 @@
         }
       ]
     ],
-    "kind": "Escore",
-    "config": {
-      "unit": "de 26",
-      "label": "Índice MASCC",
-      "fields": [
-        [
-          "carga",
-          "radio",
-          0
-        ],
-        [
-          "hipotensao",
-          "radio",
-          0
-        ],
-        [
-          "dpoc",
-          "radio",
-          0
-        ],
-        [
-          "tumor",
-          "radio",
-          0
-        ],
-        [
-          "desidratacao",
-          "radio",
-          0
-        ],
-        [
-          "local",
-          "radio",
-          0
-        ],
-        [
-          "idade",
-          "radio",
-          0
-        ]
-      ],
-      "bands": [
-        [
-          0,
-          "high",
-          "Não é baixo risco (&lt; 21 pontos)",
-          "Internar e iniciar antibiótico venoso de amplo espectro."
-        ],
-        [
-          21,
-          "low",
-          "Baixo risco (≥ 21 pontos)",
-          "Candidato a antibiótico oral e manejo ambulatorial, se também preencher os critérios clínicos e sociais."
-        ]
-      ]
-    },
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
       "testedAt": "2026-09-25",
@@ -260,17 +169,660 @@
       "failures": []
     },
     "independentArithmeticTest": {
-      "status": "not-tested",
-      "testedAt": null,
-      "total": 0,
-      "passed": 0,
-      "cases": []
+      "status": "passed",
+      "testedAt": "2026-10-04T16:44:15.380Z",
+      "total": 192,
+      "passed": 192,
+      "sourceRowCount": 192,
+      "uniqueApiInputCount": 192,
+      "sourceContextCount": 192,
+      "embeddedCasesAreSubset": true,
+      "embeddedCaseCount": 4,
+      "caseStorage": {
+        "mode": "complete-downloadable-bank-with-inline-subset",
+        "file": "independent-source-cases.json",
+        "sha256": "78d7f23b11b913fad16a1e1ae288196ac6f32552e8b76751d87dd943f07a85b5",
+        "total": 192,
+        "bankRowCount": 192,
+        "uniqueApiInputCount": 192,
+        "sourceContextCount": 192,
+        "expectedEvidence": [
+          {
+            "file": "reports/review-20261003/seven-limited-source-independent-expectations-final26.json",
+            "sha256": "4b960d8c215321b3f059726a3b7bc6b35f0fe4d63a7ee845fbc6edb535a4f0cc"
+          },
+          {
+            "file": "reports/review-20261003/oncology-four-independent-expectations-final26.json",
+            "sha256": "2c3a5304f6cccc8881724df497af561eb6cfdb3b76e5c016e1c9f0a681c477b5"
+          }
+        ],
+        "obtainedEvidence": {
+          "file": "reports/review-20261003/seven-limited-source-independent-check-final26.json",
+          "sha256": "b95bdfad7528cd2f56739eb04b63d3775e93b50844568167df849a489382cd80"
+        },
+        "packagingRequirement": "Copy this V2 strictly scoped complete bank only into fresh frozen26 packages after independent peer; V1 and prior25 archives remain unchanged."
+      },
+      "inputIdentity": {
+        "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+        "audit": {
+          "file": "reports/review-20261003/seven-limited-source-input-identity-final26.json",
+          "sha256": "e184ba55d7cd2c90120c495d3143d067bd5d72ae98b914f22a75fb943e510d94"
+        },
+        "sourceRows": 192,
+        "uniqueApiInputs": 192,
+        "duplicateRows": 0
+      },
+      "scope": "Klastersky2000 original Tables2/6/8: all192 preclassified noncumulative burden and weighted-factor point tuples, integer sum0–26 only. The separately recorded internal≥21 code is not exposed by the public API and is not promoted by this bank. No patient assessment, discharge/oral-antibiotic safety, calibration or clinical approval.",
+      "sources": [
+        {
+          "id": "mascc",
+          "edition": "Klastersky2000 original JCO18:3038–3051",
+          "url": "https://theempulse.org/wp-content/uploads/2016/04/The-Multinational-Association-for-Supportive-care-in-cancer-risk-index.pdf",
+          "identity": "DOI10.1200/JCO.2000.18.16.3038",
+          "access": "Original-paper PDF on third-party clinician mirror, downloaded. Methods/Table2/Table6/Table8/relevant threshold text read. Table2 andTable8 visually inspected; no rights clearance inferred.",
+          "primaryFacts": {
+            "population": "Chemotherapy-associated febrile neutropenic malignancy, first febrile episode; Methods specifies age>16, oral temperature>38°C, granulocytes<500/µL, appropriate initial empiric regimen. Derivation756/validation383.",
+            "table": "Noncumulative burden no/mild5, moderate3, severe0; no hypotension5; no COPD4; solid tumour OR hematologic malignancy without prior fungal infection4; no IV-requiring dehydration3; outpatient fever onset3; age<60 2. Sum0–26."
+          },
+          "readScope": [
+            "PDFp2 Methods",
+            "PDFp3 eligibility",
+            "PDFp4 Table2 and footnotes",
+            "PDFp9 Table6/threshold discussion",
+            "PDFp11 Table7/8 and surrounding text"
+          ],
+          "notVerified": [
+            "ASCO/IDSA2018 full outpatient eligibility for this new proof",
+            "Clinical assessment of burden/COPD/hypotension/dehydration",
+            "Discharge/oral-antibiotic safety or predicted risk calibration"
+          ],
+          "evidenceFiles": [
+            "oncology-four-primary-final26/mascc2000.pdf",
+            "oncology-four-primary-final26/mascc-table2-04.png",
+            "oncology-four-primary-final26/mascc-table8-11.png"
+          ]
+        }
+      ],
+      "evidencePath": "reports/review-20261003/seven-limited-source-independent-check-final26.json",
+      "evidenceSha256": "b95bdfad7528cd2f56739eb04b63d3775e93b50844568167df849a489382cd80",
+      "originalEvidence": {
+        "file": "reports/review-20261003/oncology-four-independent-source-check-final26.json",
+        "sha256": "61b59c9f707a2425440f6b71c5deb27cbddf401c9c8be32841a040898c4d1e56"
+      },
+      "independentPeer": {
+        "status": "passed",
+        "requiredScope": "Metadata/helper/source-component peer before root application; no clinical approval inferred.",
+        "recordedAt": "2026-10-04T18:58:11.466Z",
+        "scope": "Existing independent technical complete-bank/metadata/helper peer recorded after guarded source26 application. This status does not certify clinical eligibility, full instrument conformance, professional translation or source rights; no new arithmetic/browser execution is claimed by this metadata amendment.",
+        "previousStatus": {
+          "status": "pending",
+          "requiredScope": "Metadata/helper/source-component peer before root application; no clinical approval inferred."
+        },
+        "peer": {
+          "file": "reports/review-20261003/seven-limited-source-evidence-independent-peer-final26-v2-r2.json",
+          "sha256": "28a96906dcfa0ce5272da34613c4ca61686204552a235ebc4adbb65e4ff6868c",
+          "summary": {
+            "checks": 18879,
+            "failed": 0,
+            "methods": 7,
+            "sourceRows": 2902,
+            "uniqueInputs": 2902,
+            "freshExecutions": 8706,
+            "helperAssertions": 25953,
+            "metadataMethods": 120,
+            "metadataRows": 52620,
+            "metadataUnique": 52548,
+            "metadataRepeats": 72
+          },
+          "scope": "Root independent peer of exact41 preimages/afterimages; independently frozen2902 input/expected objects checked before imports; public bank numeric projection excludes untested survival, zones, prose and risk codes. Original862fixtures, fields, methods, versions and approvals retained. Exact helper reversal restores all11 previous scopes;21 fresh Node helper executions replay all7 limited numeric components without clinical approval."
+        },
+        "application": {
+          "file": "reports/review-20261003/seven-limited-source-evidence-application-final26.json",
+          "sha256": "3b1cd7d57c7062aa640504095c1a7eca5b051af7c0c0c8d4d5b1965a869080da"
+        },
+        "reviewedBankScope": "Klastersky2000 original Tables2/6/8: all192 preclassified noncumulative burden and weighted-factor point tuples, integer sum0–26 only. The separately recorded internal≥21 code is not exposed by the public API and is not promoted by this bank. No patient assessment, discharge/oral-antibiotic safety, calibration or clinical approval.",
+        "currentBinding": {
+          "source26BankSha256": "994c30dbd873735ed0470fdd29ec69d212a0c56f8d739170df022f7d22269f6f",
+          "implementations": [
+            {
+              "file": "apps/website/private/tool-code/mascc/calculator.js",
+              "sha256": "4154cec7c296b5f4affe079488de9925f703ca5551f8f6c330061e2d6ecaa8da"
+            },
+            {
+              "file": "apps/dashboard/private/tool-code/mascc/calculator.js",
+              "sha256": "4154cec7c296b5f4affe079488de9925f703ca5551f8f6c330061e2d6ecaa8da"
+            },
+            {
+              "file": "apps/command-center/private/tool-code/mascc/calculator.js",
+              "sha256": "4154cec7c296b5f4affe079488de9925f703ca5551f8f6c330061e2d6ecaa8da"
+            }
+          ],
+          "subsequentReviewedRebinds": []
+        },
+        "originalFailuresAndScopeQualificationsPreserved": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed",
+        "fullMethodConformance": "not-performed"
+      },
+      "actualAdapterExecutions": 576,
+      "actualVmExecutions": 576,
+      "implementations": [
+        {
+          "id": "mascc",
+          "app": "website",
+          "file": "apps/website/private/tool-code/mascc/calculator.js",
+          "sha256": "4154cec7c296b5f4affe079488de9925f703ca5551f8f6c330061e2d6ecaa8da"
+        },
+        {
+          "id": "mascc",
+          "app": "dashboard",
+          "file": "apps/dashboard/private/tool-code/mascc/calculator.js",
+          "sha256": "4154cec7c296b5f4affe079488de9925f703ca5551f8f6c330061e2d6ecaa8da"
+        },
+        {
+          "id": "mascc",
+          "app": "command-center",
+          "file": "apps/command-center/private/tool-code/mascc/calculator.js",
+          "sha256": "4154cec7c296b5f4affe079488de9925f703ca5551f8f6c330061e2d6ecaa8da"
+        }
+      ],
+      "qualifications": [
+        "Klastersky2000 original Tables2/6/8: all192 preclassified noncumulative burden and weighted-factor point tuples, integer sum0–26 only. The separately recorded internal≥21 code is not exposed by the public API and is not promoted by this bank. No patient assessment, discharge/oral-antibiotic safety, calibration or clinical approval.",
+        "Original sourceExpected data retained alongside own expected raw-component projections; clinical codes/thresholds and survival fields deliberately excluded from the package replay.",
+        "All862 original historical fixtures/expected values/tolerances and approval flags preserved. Four inline metadata rows are only a declared subset of this complete downloadable bank."
+      ],
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "sourceRightsApproval": "not-performed",
+      "fullMethodConformance": "not-performed",
+      "publicOutputProjection": {
+        "status": "only-verified-raw-numeric-components",
+        "recordedAt": "2026-10-04T16:49:59.851Z",
+        "sourceEvidence": {
+          "file": "reports/review-20261003/seven-limited-source-independent-check-final26.json",
+          "sha256": "b95bdfad7528cd2f56739eb04b63d3775e93b50844568167df849a489382cd80"
+        },
+        "originalBank": {
+          "file": "reports/review-20261003/seven-limited-source-evidence-stage-final26/apps/website/private/tool-code/mascc/independent-source-cases.json",
+          "sha256": "0c64f6d12eca9e04135187ce21bfb631b0845d7a3d8733010b4982abe119e33d"
+        },
+        "originalReportsPreserved": true,
+        "excluded": [
+          "Unexposed MASCC risk flag and USC/VNPI group expectations",
+          "MACIS survival and other untested returned raw fields",
+          "Karvonen exercise-zone main display and all untested main display values",
+          "Original API error prose; only rejection presence is tested"
+        ],
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      },
+      "publicCandidateBankOmitted": true
+    },
+    "methodVersion": "MASCC/Klastersky 2000:7 domínios, total 0–26, corte≥21; contexto ASCOIDSA 2018",
+    "implementationVersion": "mascc@native-2026-10-03+4154cec7c296",
+    "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/10944139/",
+    "versionEvidence": {
+      "status": "variant-and-source-edition-recorded",
+      "checkedAt": "2026-10-03",
+      "implementedVariant": "Carga da doença: nenhum/leve 5, moderado 3, grave 0 · sem hipotensão 5 · sem DPOC 4 · tumor sólido 4, ou tumor hematológico sem infecção fúngica prévia 4 · sem desidratação 3 · paciente ambulatorial 3 · idade < 60 anos 2. Máximo: 26.",
+      "inputContract": {
+        "fields": [
+          {
+            "key": "carga",
+            "label": "Carga da doença (sintomas do episódio febril)",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "Graves ou moribundo",
+              "3": "Moderados",
+              "5": "Nenhum ou leves"
+            }
+          },
+          {
+            "key": "hipotensao",
+            "label": "Hipotensão (PAS &lt; 90 mmHg)",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "Sim",
+              "5": "Não"
+            }
+          },
+          {
+            "key": "dpoc",
+            "label": "DPOC ativa",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "Sim",
+              "4": "Não"
+            }
+          },
+          {
+            "key": "tumor",
+            "label": "Tipo de câncer",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "Hematológico com infecção fúngica prévia",
+              "4": "Tumor sólido, ou hematológico sem infecção fúngica prévia"
+            }
+          },
+          {
+            "key": "desidratacao",
+            "label": "Desidratação que exige hidratação venosa",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "Sim",
+              "3": "Não"
+            }
+          },
+          {
+            "key": "local",
+            "label": "Onde começou a febre",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "Durante internação",
+              "3": "Ambulatorial"
+            }
+          },
+          {
+            "key": "idade",
+            "label": "Idade",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "≥ 60 anos",
+              "2": "&lt; 60 anos"
+            }
+          }
+        ],
+        "hash": "17ad070c0b2189b501d362953391d5aadbf484e8f748e146bf2c0b434615bce1"
+      },
+      "sourceEditions": [
+        {
+          "citation": "Klastersky J et al. The Multinational Association for Supportive Care in Cancer risk index: a multinational scoring system for identifying low-risk febrile neutropenic cancer patients. J Clin Oncol, 2000.",
+          "url": "https://doi.org/10.1200/JCO.2000.18.16.3038",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "The Multinational Association for Supportive Care in Cancer risk index: A multinational scoring system for identifying low-risk febrile neutropenic cancer patients.",
+            "year": "2000",
+            "firstPublicationDate": "2000-08-01",
+            "doi": "10.1200/jco.2000.18.16.3038",
+            "pmid": "10944139",
+            "journal": "Journal of clinical oncology : official journal of the American Society of Clinical Oncology",
+            "authors": "Klastersky J, Paesmans M, Rubenstein EB, Boyer M, Elting L, Feld R, Gallagher J, Herrstedt J, Rapoport B, Rolston K, Talcott J."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/10944139/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "6a0dd17da1c578fb870f1e1493c2c38be635fe0da8fdafda7a81a653e61bff1a",
+          "matchedBy": "exact-DOI-or-PMID"
+        },
+        {
+          "citation": "Taplitz RA et al. Outpatient management of fever and neutropenia in adults treated for malignancy: American Society of Clinical Oncology and Infectious Diseases Society of America clinical practice guideline update. J Clin Oncol, 2018.",
+          "url": "https://doi.org/10.1200/JCO.2017.77.6211",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Outpatient Management of Fever and Neutropenia in Adults Treated for Malignancy: American Society of Clinical Oncology and Infectious Diseases Society of America Clinical Practice Guideline Update.",
+            "year": "2018",
+            "firstPublicationDate": "2018-02-20",
+            "doi": "10.1200/jco.2017.77.6211",
+            "pmid": "29461916",
+            "journal": "Journal of clinical oncology : official journal of the American Society of Clinical Oncology",
+            "authors": "Taplitz RA, Kennedy EB, Bow EJ, Crews J, Gleason C, Hawley DK, Langston AA, Nastoupil LJ, Rajotte M, Rolston K, Strasfeld L, Flowers CR."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/29461916/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "0a026d8b4e041df956b4be1c52ae163f7a3ffa3cecd2f5c77257f665a33a3b10",
+          "matchedBy": "exact-DOI-or-PMID"
+        }
+      ],
+      "publicationEditionConfirmed": true,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by bibliographic identity or automatic full-text retrieval; retain independent arithmetic and clinical review as separate evidence.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-10-04T16:44:15.380Z",
+        "total": 192,
+        "passed": 192,
+        "sourceRowCount": 192,
+        "uniqueApiInputCount": 192,
+        "sourceContextCount": 192,
+        "embeddedCasesAreSubset": true,
+        "embeddedCaseCount": 4,
+        "caseStorage": {
+          "mode": "complete-downloadable-bank-with-inline-subset",
+          "file": "independent-source-cases.json",
+          "sha256": "78d7f23b11b913fad16a1e1ae288196ac6f32552e8b76751d87dd943f07a85b5",
+          "total": 192,
+          "bankRowCount": 192,
+          "uniqueApiInputCount": 192,
+          "sourceContextCount": 192,
+          "expectedEvidence": [
+            {
+              "file": "reports/review-20261003/seven-limited-source-independent-expectations-final26.json",
+              "sha256": "4b960d8c215321b3f059726a3b7bc6b35f0fe4d63a7ee845fbc6edb535a4f0cc"
+            },
+            {
+              "file": "reports/review-20261003/oncology-four-independent-expectations-final26.json",
+              "sha256": "2c3a5304f6cccc8881724df497af561eb6cfdb3b76e5c016e1c9f0a681c477b5"
+            }
+          ],
+          "obtainedEvidence": {
+            "file": "reports/review-20261003/seven-limited-source-independent-check-final26.json",
+            "sha256": "b95bdfad7528cd2f56739eb04b63d3775e93b50844568167df849a489382cd80"
+          },
+          "packagingRequirement": "Copy this V2 strictly scoped complete bank only into fresh frozen26 packages after independent peer; V1 and prior25 archives remain unchanged."
+        },
+        "inputIdentity": {
+          "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+          "audit": {
+            "file": "reports/review-20261003/seven-limited-source-input-identity-final26.json",
+            "sha256": "e184ba55d7cd2c90120c495d3143d067bd5d72ae98b914f22a75fb943e510d94"
+          },
+          "sourceRows": 192,
+          "uniqueApiInputs": 192,
+          "duplicateRows": 0
+        },
+        "scope": "Klastersky2000 original Tables2/6/8: all192 preclassified noncumulative burden and weighted-factor point tuples, integer sum0–26 only. The separately recorded internal≥21 code is not exposed by the public API and is not promoted by this bank. No patient assessment, discharge/oral-antibiotic safety, calibration or clinical approval.",
+        "sources": [
+          {
+            "id": "mascc",
+            "edition": "Klastersky2000 original JCO18:3038–3051",
+            "url": "https://theempulse.org/wp-content/uploads/2016/04/The-Multinational-Association-for-Supportive-care-in-cancer-risk-index.pdf",
+            "identity": "DOI10.1200/JCO.2000.18.16.3038",
+            "access": "Original-paper PDF on third-party clinician mirror, downloaded. Methods/Table2/Table6/Table8/relevant threshold text read. Table2 andTable8 visually inspected; no rights clearance inferred.",
+            "primaryFacts": {
+              "population": "Chemotherapy-associated febrile neutropenic malignancy, first febrile episode; Methods specifies age>16, oral temperature>38°C, granulocytes<500/µL, appropriate initial empiric regimen. Derivation756/validation383.",
+              "table": "Noncumulative burden no/mild5, moderate3, severe0; no hypotension5; no COPD4; solid tumour OR hematologic malignancy without prior fungal infection4; no IV-requiring dehydration3; outpatient fever onset3; age<60 2. Sum0–26."
+            },
+            "readScope": [
+              "PDFp2 Methods",
+              "PDFp3 eligibility",
+              "PDFp4 Table2 and footnotes",
+              "PDFp9 Table6/threshold discussion",
+              "PDFp11 Table7/8 and surrounding text"
+            ],
+            "notVerified": [
+              "ASCO/IDSA2018 full outpatient eligibility for this new proof",
+              "Clinical assessment of burden/COPD/hypotension/dehydration",
+              "Discharge/oral-antibiotic safety or predicted risk calibration"
+            ],
+            "evidenceFiles": [
+              "oncology-four-primary-final26/mascc2000.pdf",
+              "oncology-four-primary-final26/mascc-table2-04.png",
+              "oncology-four-primary-final26/mascc-table8-11.png"
+            ]
+          }
+        ],
+        "evidencePath": "reports/review-20261003/seven-limited-source-independent-check-final26.json",
+        "evidenceSha256": "b95bdfad7528cd2f56739eb04b63d3775e93b50844568167df849a489382cd80",
+        "originalEvidence": {
+          "file": "reports/review-20261003/oncology-four-independent-source-check-final26.json",
+          "sha256": "61b59c9f707a2425440f6b71c5deb27cbddf401c9c8be32841a040898c4d1e56"
+        },
+        "independentPeer": {
+          "status": "passed",
+          "requiredScope": "Metadata/helper/source-component peer before root application; no clinical approval inferred.",
+          "recordedAt": "2026-10-04T18:58:11.466Z",
+          "scope": "Existing independent technical complete-bank/metadata/helper peer recorded after guarded source26 application. This status does not certify clinical eligibility, full instrument conformance, professional translation or source rights; no new arithmetic/browser execution is claimed by this metadata amendment.",
+          "previousStatus": {
+            "status": "pending",
+            "requiredScope": "Metadata/helper/source-component peer before root application; no clinical approval inferred."
+          },
+          "peer": {
+            "file": "reports/review-20261003/seven-limited-source-evidence-independent-peer-final26-v2-r2.json",
+            "sha256": "28a96906dcfa0ce5272da34613c4ca61686204552a235ebc4adbb65e4ff6868c",
+            "summary": {
+              "checks": 18879,
+              "failed": 0,
+              "methods": 7,
+              "sourceRows": 2902,
+              "uniqueInputs": 2902,
+              "freshExecutions": 8706,
+              "helperAssertions": 25953,
+              "metadataMethods": 120,
+              "metadataRows": 52620,
+              "metadataUnique": 52548,
+              "metadataRepeats": 72
+            },
+            "scope": "Root independent peer of exact41 preimages/afterimages; independently frozen2902 input/expected objects checked before imports; public bank numeric projection excludes untested survival, zones, prose and risk codes. Original862fixtures, fields, methods, versions and approvals retained. Exact helper reversal restores all11 previous scopes;21 fresh Node helper executions replay all7 limited numeric components without clinical approval."
+          },
+          "application": {
+            "file": "reports/review-20261003/seven-limited-source-evidence-application-final26.json",
+            "sha256": "3b1cd7d57c7062aa640504095c1a7eca5b051af7c0c0c8d4d5b1965a869080da"
+          },
+          "reviewedBankScope": "Klastersky2000 original Tables2/6/8: all192 preclassified noncumulative burden and weighted-factor point tuples, integer sum0–26 only. The separately recorded internal≥21 code is not exposed by the public API and is not promoted by this bank. No patient assessment, discharge/oral-antibiotic safety, calibration or clinical approval.",
+          "currentBinding": {
+            "source26BankSha256": "994c30dbd873735ed0470fdd29ec69d212a0c56f8d739170df022f7d22269f6f",
+            "implementations": [
+              {
+                "file": "apps/website/private/tool-code/mascc/calculator.js",
+                "sha256": "4154cec7c296b5f4affe079488de9925f703ca5551f8f6c330061e2d6ecaa8da"
+              },
+              {
+                "file": "apps/dashboard/private/tool-code/mascc/calculator.js",
+                "sha256": "4154cec7c296b5f4affe079488de9925f703ca5551f8f6c330061e2d6ecaa8da"
+              },
+              {
+                "file": "apps/command-center/private/tool-code/mascc/calculator.js",
+                "sha256": "4154cec7c296b5f4affe079488de9925f703ca5551f8f6c330061e2d6ecaa8da"
+              }
+            ],
+            "subsequentReviewedRebinds": []
+          },
+          "originalFailuresAndScopeQualificationsPreserved": true,
+          "clinicalApproval": "not-performed",
+          "professionalLanguageApproval": "not-performed",
+          "sourceRightsApproval": "not-performed",
+          "fullMethodConformance": "not-performed"
+        },
+        "actualAdapterExecutions": 576,
+        "actualVmExecutions": 576,
+        "implementations": [
+          {
+            "id": "mascc",
+            "app": "website",
+            "file": "apps/website/private/tool-code/mascc/calculator.js",
+            "sha256": "4154cec7c296b5f4affe079488de9925f703ca5551f8f6c330061e2d6ecaa8da"
+          },
+          {
+            "id": "mascc",
+            "app": "dashboard",
+            "file": "apps/dashboard/private/tool-code/mascc/calculator.js",
+            "sha256": "4154cec7c296b5f4affe079488de9925f703ca5551f8f6c330061e2d6ecaa8da"
+          },
+          {
+            "id": "mascc",
+            "app": "command-center",
+            "file": "apps/command-center/private/tool-code/mascc/calculator.js",
+            "sha256": "4154cec7c296b5f4affe079488de9925f703ca5551f8f6c330061e2d6ecaa8da"
+          }
+        ],
+        "qualifications": [
+          "Klastersky2000 original Tables2/6/8: all192 preclassified noncumulative burden and weighted-factor point tuples, integer sum0–26 only. The separately recorded internal≥21 code is not exposed by the public API and is not promoted by this bank. No patient assessment, discharge/oral-antibiotic safety, calibration or clinical approval.",
+          "Original sourceExpected data retained alongside own expected raw-component projections; clinical codes/thresholds and survival fields deliberately excluded from the package replay.",
+          "All862 original historical fixtures/expected values/tolerances and approval flags preserved. Four inline metadata rows are only a declared subset of this complete downloadable bank."
+        ],
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed",
+        "fullMethodConformance": "not-performed",
+        "publicOutputProjection": {
+          "status": "only-verified-raw-numeric-components",
+          "recordedAt": "2026-10-04T16:49:59.851Z",
+          "sourceEvidence": {
+            "file": "reports/review-20261003/seven-limited-source-independent-check-final26.json",
+            "sha256": "b95bdfad7528cd2f56739eb04b63d3775e93b50844568167df849a489382cd80"
+          },
+          "originalBank": {
+            "file": "reports/review-20261003/seven-limited-source-evidence-stage-final26/apps/website/private/tool-code/mascc/independent-source-cases.json",
+            "sha256": "0c64f6d12eca9e04135187ce21bfb631b0845d7a3d8733010b4982abe119e33d"
+          },
+          "originalReportsPreserved": true,
+          "excluded": [
+            "Unexposed MASCC risk flag and USC/VNPI group expectations",
+            "MACIS survival and other untested returned raw fields",
+            "Karvonen exercise-zone main display and all untested main display values",
+            "Original API error prose; only rejection presence is tested"
+          ],
+          "clinicalApproval": "not-performed",
+          "professionalLanguageApproval": "not-performed"
+        },
+        "publicCandidateBankOmitted": true
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "implementationHash": "4154cec7c296b5f4affe079488de9925f703ca5551f8f6c330061e2d6ecaa8da",
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-04T17:52:09.841Z",
+          "changes": [
+            "inputContract",
+            "implementedVariant"
+          ],
+          "priorImplementationVersion": "mascc@native-2026-10-03+4154cec7c296",
+          "priorImplementationHash": "4154cec7c296b5f4affe079488de9925f703ca5551f8f6c330061e2d6ecaa8da",
+          "priorInputContract": {
+            "fields": [
+              {
+                "key": "carga",
+                "label": "Carga da doença (sintomas do episódio febril)",
+                "type": "radio",
+                "optional": false,
+                "options": {
+                  "0": "Graves ou moribundo",
+                  "3": "Moderados",
+                  "5": "Nenhum ou leves"
+                }
+              },
+              {
+                "key": "hipotensao",
+                "label": "Hipotensão (PAS &lt; 90 mmHg)",
+                "type": "radio",
+                "optional": false,
+                "options": {
+                  "0": "Sim",
+                  "5": "Não"
+                }
+              },
+              {
+                "key": "dpoc",
+                "label": "DPOC ativa",
+                "type": "radio",
+                "optional": false,
+                "options": {
+                  "0": "Sim",
+                  "4": "Não"
+                }
+              },
+              {
+                "key": "tumor",
+                "label": "Tipo de câncer",
+                "type": "radio",
+                "optional": false,
+                "options": {
+                  "0": "Hematológico com infecção fúngica prévia",
+                  "4": "Tumor sólido, ou hematológico sem infecção fúngica prévia"
+                }
+              },
+              {
+                "key": "desidratacao",
+                "label": "Desidratação que exige hidratação venosa",
+                "type": "radio",
+                "optional": false,
+                "options": {
+                  "0": "Sim",
+                  "3": "Não"
+                }
+              },
+              {
+                "key": "local",
+                "label": "Onde começou a febre",
+                "type": "radio",
+                "optional": false,
+                "options": {
+                  "0": "Durante internação",
+                  "3": "Ambulatorial"
+                }
+              },
+              {
+                "key": "idade",
+                "label": "Idade",
+                "type": "radio",
+                "optional": false,
+                "options": {
+                  "0": "≥ 60 anos",
+                  "2": "&lt; 60 anos"
+                }
+              }
+            ],
+            "hash": "6b5593fa6452366cdffae1d357ff634a1de8bc460050eb7c7188e84d3281a7e8"
+          },
+          "priorImplementedVariant": "Carga da doença: nenhum/leve 5, moderado 3, grave 0 · sem hipotensão 5 · sem DPOC 4 · tumor sólido ou hematológico sem infecção fúngica prévia 4 · sem desidratação 3 · paciente ambulatorial 3 · idade < 60 anos 2. Máximo: 26.",
+          "explicitMethodVersion": "MASCC/Klastersky 2000:7 domínios, total 0–26, corte≥21; contexto ASCOIDSA 2018",
+          "sourceEvidenceUnchanged": true,
+          "independentArithmeticUnchanged": true,
+          "clinicalApproval": "not-performed",
+          "professionalLanguageApproval": "not-performed",
+          "sourceRightsApproval": "not-performed",
+          "scope": "Declarative technical rebinding only. Source access scope, source proofs and original failure/test histories remain unchanged."
+        }
+      ]
+    },
+    "limits": "MASCC ≥21 indica menor risco de complicações, mas não autoriza sozinho alta, antibiótico oral ou manejo ambulatorial. No contexto ASCO/IDSA 2018, a seleção depende de avaliação clínica, estabilidade, comorbidades, capacidade de cumprir retornos, cuidador em casa, telefone e transporte disponíveis. Candidatos ao manejo ambulatorial devem ser observados por pelo menos 4 horas antes da alta e requerem seguimento. O critério de hipotensão desta implementação segue a variável original de 2000: PAS <90 mmHg.",
+    "limitsEvidence": {
+      "status": "primary-source-documentation-checked",
+      "sources": [
+        {
+          "url": "https://www.idsociety.org/globalassets/idsa/practice-guidelines/outpatient-management-of-fever-and-neutropenia.pdf",
+          "edition": "ASCO/IDSA2018;DOI10.1200/JCO.2017.77.6211",
+          "sectionsActuallyRead": "Table1/PDF6, Table2/PDF7, Recommendation2.1/PDF5, Recommendation3.1/4.1/PDF7; visual",
+          "access": "primary-pdf-visually-read"
+        },
+        {
+          "url": "https://theempulse.org/wp-content/uploads/2016/04/The-Multinational-Association-for-Supportive-care-in-cancer-risk-index.pdf",
+          "edition": "Original Klastersky2000;DOI10.1200/JCO.2000.18.16.3038",
+          "sectionsActuallyRead": "Table2/PDF4/printed3041; visual",
+          "access": "primary-original-article-copy-visually-read"
+        }
+      ],
+      "clinicalValidation": "not-performed",
+      "professionalLanguageReview": "not-performed",
+      "arithmeticChanged": false
     }
   },
-  "review": {
-    "status": "needs-review",
-    "reason": "Revisão documental e clínica independente pendente.",
-    "clinicalValidation": "not-performed"
+  "currentSource": {
+    "file": "apps/website/private/tool-code/mascc/calculator.js",
+    "bytes": 5240,
+    "sha256": "4154cec7c296b5f4affe079488de9925f703ca5551f8f6c330061e2d6ecaa8da"
   },
-  "clinicalValidation": "not-performed"
+  "sourceToolSha256": "0e5a4b642d0dd0591d1880322a23d8b0d715ec1d8c8b6815523106637b70e1fb",
+  "omittedFullReferenceBanks": [
+    {
+      "rows": 4,
+      "sha256": "4398d9d078a28bef049026f932c7c6fadd2aaa0a8df500af9736e190f3019129",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    },
+    {
+      "rows": 4,
+      "sha256": "4398d9d078a28bef049026f932c7c6fadd2aaa0a8df500af9736e190f3019129",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    }
+  ],
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }
