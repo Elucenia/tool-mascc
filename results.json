@@ -268,7 +268,25 @@
   "sourceNodeBrowserVmParity": true,
   "actualBrowserDomVerified": false,
   "newIndependentOracle": false,
-  "currentActualR6HttpEvidence": "pending",
+  "currentActualR6HttpEvidence": {
+    "path": "evidence/served-http-r6.json",
+    "bytes": 19812,
+    "sha256": "6687e35b1ec5a9f798729b8e61c36c16b7b701456fd72c63a5fa57bf16f43448",
+    "sourceReceipt": {
+      "file": "reports/review-20261005-completion/deploy-lock/r6-all-calculators-http-results.json",
+      "bytes": 7105396,
+      "sha256": "c0b1e4dc320ce807e78c0444e629c1269b545b6e2ac87c265d896073d8c34ecb"
+    },
+    "servedBuildId": "jN-2wbRrarMjYPwdPnRHh",
+    "sourceCalculator": {
+      "file": "deliveries/elucenia-next-hostinger-r6/private/tool-code/mascc/calculator.js",
+      "sha256": "4154cec7c296b5f4affe079488de9925f703ca5551f8f6c330061e2d6ecaa8da",
+      "bytes": 5240
+    },
+    "cases": 3,
+    "status": "passed"
+  },
   "clinicalApproval": false,
-  "professionalLanguageApproval": false
+  "professionalLanguageApproval": false,
+  "frozenSourceCurrentAdapterMatch": true
 }
