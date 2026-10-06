@@ -107,3 +107,28 @@ Formula or classification result. Interpretation, care and applicability depend 
 Apache-2.0 applies only to ELUCENIA code. Rights to instruments, publications, translations and data remain with their respective holders. Preserve LICENSE and NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Documented results
+
+The information below preserves the method outputs for synthetic examples. It does not constitute independent clinical validation.
+
+### 1
+
+Low risk (≥ 21 points)
+
+Candidate for oral antibiotic and outpatient management, if clinical and social criteria are also met.
+
+
+### 2
+
+Low risk (≥ 21 points)
+
+Candidate for oral antibiotic and outpatient management, if clinical and social criteria are also met.
+
+
+### 3
+
+Not low risk (< 21 points)
+
+Admit and start broad-spectrum intravenous antibiotic.
+

@@ -107,3 +107,28 @@ Résultat de la formule ou de la classification. L’interprétation, la conduit
 Apache-2.0 s’applique uniquement au code d’ELUCENIA. Les droits sur les instruments, publications, traductions et données restent ceux de leurs titulaires respectifs. Conservez LICENSE et NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Résultats documentés
+
+Les informations ci-dessous conservent les sorties de la méthode pour des exemples synthétiques. Elles ne constituent pas une validation clinique indépendante.
+
+### 1
+
+Faible risque (≥ 21 points)
+
+Candidat à un antibiotique oral et à une prise en charge ambulatoire, s’il remplit aussi les critères cliniques et sociaux.
+
+
+### 2
+
+Faible risque (≥ 21 points)
+
+Candidat à un antibiotique oral et à une prise en charge ambulatoire, s’il remplit aussi les critères cliniques et sociaux.
+
+
+### 3
+
+N’est pas à faible risque (< 21 points)
+
+Hospitaliser et débuter un antibiotique intraveineux à large spectre.
+

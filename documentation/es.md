@@ -107,3 +107,28 @@ Resultado de la fórmula o clasificación. La interpretación, la conducta y la 
 Apache-2.0 se aplica únicamente al código de ELUCENIA. Los derechos de los instrumentos, publicaciones, traducciones y datos permanecen en manos de sus respectivos titulares. Conserve LICENSE y NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Resultados documentados
+
+La información siguiente conserva las salidas del método para ejemplos sintéticos. No constituye una validación clínica independiente.
+
+### 1
+
+Bajo riesgo (≥ 21 puntos)
+
+Candidato a antibiótico oral y manejo ambulatorio, si también cumple los criterios clínicos y sociales.
+
+
+### 2
+
+Bajo riesgo (≥ 21 puntos)
+
+Candidato a antibiótico oral y manejo ambulatorio, si también cumple los criterios clínicos y sociales.
+
+
+### 3
+
+No es de bajo riesgo (< 21 puntos)
+
+Ingresar e iniciar antibiótico intravenoso de amplio espectro.
+

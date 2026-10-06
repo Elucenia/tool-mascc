@@ -1,0 +1,181 @@
+{
+  "schema": "elucenia-public-source-result-preservation-v1",
+  "id": "mascc",
+  "source": {
+    "baselineFile": "reports/review-20261005-completion/public-native-output-baseline-r2/baseline.json",
+    "baselineSha256": "e5f274fa5acc74566e1c3d55afb6bb402ad9928337dd77a2945442f5b6c49439",
+    "previousCommit": "86c9483fb56ddafc56f1a6e500536a7c44cb3ec8",
+    "oldEngineSha256": "4154cec7c296b5f4affe079488de9925f703ca5551f8f6c330061e2d6ecaa8da",
+    "currentEngineSha256": "7a495fe7d129d528ded669e9d70e12c262c0b583e150a78436f35c39d06ef795"
+  },
+  "scope": "Existing synthetic inputs and same pinned mathematical-function outputs. Clinical interpretation correctness and professional translation are separate unperformed reviews.",
+  "clinicalApproval": "not-performed",
+  "professionalLanguageReview": "not-performed",
+  "cases": [
+    {
+      "caseIndex": 0,
+      "name": "Sintomas leves, sem outros fatores, 55 anos, ambulatorial: 26 pontos",
+      "input": {
+        "carga": "5",
+        "hipotensao": "5",
+        "dpoc": "4",
+        "tumor": "4",
+        "desidratacao": "3",
+        "local": "3",
+        "idade": "2"
+      },
+      "publicOutput": {
+        "id": "mascc",
+        "main": [
+          "26",
+          "de 26"
+        ],
+        "label": "Índice MASCC",
+        "raw": {
+          "score": 26
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 26,
+        "level": "low"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "26",
+          "de 26"
+        ],
+        "label": "Índice MASCC",
+        "level": "low",
+        "verdict": "Baixo risco (≥ 21 pontos)",
+        "note": "Candidato a antibiótico oral e manejo ambulatorial, se também preencher os critérios clínicos e sociais.",
+        "raw": {
+          "score": 26
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "note"
+      ]
+    },
+    {
+      "caseIndex": 1,
+      "name": "Corte: sintomas moderados, febre na internação, &lt; 60 anos: 3+5+4+4+3+0+2 = 21",
+      "input": {
+        "carga": "3",
+        "hipotensao": "5",
+        "dpoc": "4",
+        "tumor": "4",
+        "desidratacao": "3",
+        "local": "0",
+        "idade": "2"
+      },
+      "publicOutput": {
+        "id": "mascc",
+        "main": [
+          "21",
+          "de 26"
+        ],
+        "label": "Índice MASCC",
+        "raw": {
+          "score": 21
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 21,
+        "level": "low"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "21",
+          "de 26"
+        ],
+        "label": "Índice MASCC",
+        "level": "low",
+        "verdict": "Baixo risco (≥ 21 pontos)",
+        "note": "Candidato a antibiótico oral e manejo ambulatorial, se também preencher os critérios clínicos e sociais.",
+        "raw": {
+          "score": 21
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "note"
+      ]
+    },
+    {
+      "caseIndex": 2,
+      "name": "Sintomas moderados, hipotenso, 70 anos: 3+0+4+4+3+3+0 = 17",
+      "input": {
+        "carga": "3",
+        "hipotensao": "0",
+        "dpoc": "4",
+        "tumor": "4",
+        "desidratacao": "3",
+        "local": "3",
+        "idade": "0"
+      },
+      "publicOutput": {
+        "id": "mascc",
+        "main": [
+          "17",
+          "de 26"
+        ],
+        "label": "Índice MASCC",
+        "raw": {
+          "score": 17
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 17,
+        "level": "high"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "17",
+          "de 26"
+        ],
+        "label": "Índice MASCC",
+        "level": "high",
+        "verdict": "Não é baixo risco (&lt; 21 pontos)",
+        "note": "Internar e iniciar antibiótico venoso de amplo espectro.",
+        "raw": {
+          "score": 17
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level",
+        "note"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level",
+        "note"
+      ]
+    }
+  ]
+}

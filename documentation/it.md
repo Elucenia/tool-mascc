@@ -107,3 +107,28 @@ Risultato della formula o classificazione. Interpretazione, condotta e applicabi
 Apache-2.0 si applica solo al codice di ELUCENIA. I diritti su strumenti, pubblicazioni, traduzioni e dati restano ai rispettivi titolari. Conservi LICENSE e NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Risultati documentati
+
+Le informazioni seguenti conservano gli output del metodo per esempi sintetici. Non costituiscono una validazione clinica indipendente.
+
+### 1
+
+Basso rischio (≥ 21 punti)
+
+Candidato per antibiotico orale e gestione ambulatoriale, se soddisfa anche i criteri clinici e sociali.
+
+
+### 2
+
+Basso rischio (≥ 21 punti)
+
+Candidato per antibiotico orale e gestione ambulatoriale, se soddisfa anche i criteri clinici e sociali.
+
+
+### 3
+
+Non è a basso rischio (< 21 punti)
+
+Ricoverare e iniziare un antibiotico endovenoso ad ampio spettro.
+

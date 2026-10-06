@@ -360,7 +360,7 @@
       "publicCandidateBankOmitted": true
     },
     "methodVersion": "MASCC/Klastersky 2000:7 domínios, total 0–26, corte≥21; contexto ASCOIDSA 2018",
-    "implementationVersion": "mascc@native-2026-10-03+4154cec7c296",
+    "implementationVersion": "mascc@native-2026-10-05+7a495fe7d129",
     "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/10944139/",
     "versionEvidence": {
       "status": "variant-and-source-edition-recorded",
@@ -685,7 +685,7 @@
       "clinicalApproval": "not-performed",
       "translationApproval": "not-performed",
       "releaseApproval": "not-performed",
-      "implementationHash": "4154cec7c296b5f4affe079488de9925f703ca5551f8f6c330061e2d6ecaa8da",
+      "implementationHash": "7a495fe7d129d528ded669e9d70e12c262c0b583e150a78436f35c39d06ef795",
       "technicalBindingHistory": [
         {
           "recordedAt": "2026-10-04T17:52:09.841Z",
@@ -779,8 +779,34 @@
           "professionalLanguageApproval": "not-performed",
           "sourceRightsApproval": "not-performed",
           "scope": "Declarative technical rebinding only. Source access scope, source proofs and original failure/test histories remain unchanged."
+        },
+        {
+          "recordedAt": "2026-10-05T23:55:42.176Z",
+          "scope": "Expose existing documented result fields; scientific body and complete input contract unchanged.",
+          "previousImplementationVersion": "mascc@native-2026-10-03+4154cec7c296",
+          "previousImplementationHash": "4154cec7c296b5f4affe079488de9925f703ca5551f8f6c330061e2d6ecaa8da",
+          "implementationHash": "7a495fe7d129d528ded669e9d70e12c262c0b583e150a78436f35c39d06ef795",
+          "scientificBodySha256": "e85276683115c11c8a08c490b617391606f7137a1aaae50779ecc2e6796ea25d",
+          "metadataContractHash": "17ad070c0b2189b501d362953391d5aadbf484e8f748e146bf2c0b434615bce1",
+          "exposureReceiptSha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
         }
-      ]
+      ],
+      "documentedOutputContract": {
+        "fields": [
+          "level",
+          "verdict",
+          "rows",
+          "note"
+        ],
+        "scope": "Optional documented outputs already produced by the existing scientific method; no new classification or treatment decision.",
+        "sourceExposureReceipt": {
+          "file": "reports/review-20261005-completion/native-result-presentation-r1/applied-output-r1/receipt.json",
+          "sha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        },
+        "scientificBodiesUnchanged": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      }
     },
     "limits": "MASCC ≥21 indica menor risco de complicações, mas não autoriza sozinho alta, antibiótico oral ou manejo ambulatorial. No contexto ASCO/IDSA 2018, a seleção depende de avaliação clínica, estabilidade, comorbidades, capacidade de cumprir retornos, cuidador em casa, telefone e transporte disponíveis. Candidatos ao manejo ambulatorial devem ser observados por pelo menos 4 horas antes da alta e requerem seguimento. O critério de hipotensão desta implementação segue a variável original de 2000: PAS <90 mmHg.",
     "limitsEvidence": {
@@ -806,20 +832,20 @@
   },
   "currentSource": {
     "file": "apps/website/private/tool-code/mascc/calculator.js",
-    "bytes": 5240,
-    "sha256": "4154cec7c296b5f4affe079488de9925f703ca5551f8f6c330061e2d6ecaa8da"
+    "bytes": 5445,
+    "sha256": "7a495fe7d129d528ded669e9d70e12c262c0b583e150a78436f35c39d06ef795"
   },
-  "sourceToolSha256": "0e5a4b642d0dd0591d1880322a23d8b0d715ec1d8c8b6815523106637b70e1fb",
+  "sourceToolSha256": "0c48ce086bd3392ccd66967435f7ca8c275f038c92fa9150b996c6c499a80126",
   "omittedFullReferenceBanks": [
     {
       "rows": 4,
       "sha256": "4398d9d078a28bef049026f932c7c6fadd2aaa0a8df500af9736e190f3019129",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     },
     {
       "rows": 4,
       "sha256": "4398d9d078a28bef049026f932c7c6fadd2aaa0a8df500af9736e190f3019129",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     }
   ],
   "clinicalApproval": "not-performed",

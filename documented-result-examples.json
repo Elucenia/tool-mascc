@@ -1,0 +1,537 @@
+{
+  "id": "mascc",
+  "implementationVersion": "mascc@native-2026-10-05+7a495fe7d129",
+  "scope": "Rendered current output against the same source method; not an independent numerical/clinical oracle",
+  "locales": {
+    "pt-BR": [
+      {
+        "name": "Sintomas leves, sem outros fatores, 55 anos, ambulatorial: 26 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Baixo risco (≥ 21 pontos)",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Candidato a antibiótico oral e manejo ambulatorial, se também preencher os critérios clínicos e sociais.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Corte: sintomas moderados, febre na internação, &lt; 60 anos: 3+5+4+4+3+0+2 = 21",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Baixo risco (≥ 21 pontos)",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Candidato a antibiótico oral e manejo ambulatorial, se também preencher os critérios clínicos e sociais.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Sintomas moderados, hipotenso, 70 anos: 3+0+4+4+3+3+0 = 17",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Não é baixo risco (< 21 pontos)",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "note": {
+            "text": "Internar e iniciar antibiótico venoso de amplo espectro.",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "en": [
+      {
+        "name": "Sintomas leves, sem outros fatores, 55 anos, ambulatorial: 26 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Low risk (≥ 21 points)",
+            "locale": "en",
+            "template": "documented-authored-ae640d5324f303415705"
+          },
+          "note": {
+            "text": "Candidate for oral antibiotic and outpatient management, if clinical and social criteria are also met.",
+            "locale": "en",
+            "template": "documented-authored-161b250687687e699b40"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Corte: sintomas moderados, febre na internação, &lt; 60 anos: 3+5+4+4+3+0+2 = 21",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Low risk (≥ 21 points)",
+            "locale": "en",
+            "template": "documented-authored-ae640d5324f303415705"
+          },
+          "note": {
+            "text": "Candidate for oral antibiotic and outpatient management, if clinical and social criteria are also met.",
+            "locale": "en",
+            "template": "documented-authored-161b250687687e699b40"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Sintomas moderados, hipotenso, 70 anos: 3+0+4+4+3+3+0 = 17",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Not low risk (< 21 points)",
+            "locale": "en",
+            "template": "documented-authored-892f456a9a6013b5c444"
+          },
+          "note": {
+            "text": "Admit and start broad-spectrum intravenous antibiotic.",
+            "locale": "en",
+            "template": "documented-authored-3ddaa05760eea456ff96"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "es": [
+      {
+        "name": "Sintomas leves, sem outros fatores, 55 anos, ambulatorial: 26 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Bajo riesgo (≥ 21 puntos)",
+            "locale": "es",
+            "template": "documented-authored-ae640d5324f303415705"
+          },
+          "note": {
+            "text": "Candidato a antibiótico oral y manejo ambulatorio, si también cumple los criterios clínicos y sociales.",
+            "locale": "es",
+            "template": "documented-authored-161b250687687e699b40"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Corte: sintomas moderados, febre na internação, &lt; 60 anos: 3+5+4+4+3+0+2 = 21",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Bajo riesgo (≥ 21 puntos)",
+            "locale": "es",
+            "template": "documented-authored-ae640d5324f303415705"
+          },
+          "note": {
+            "text": "Candidato a antibiótico oral y manejo ambulatorio, si también cumple los criterios clínicos y sociales.",
+            "locale": "es",
+            "template": "documented-authored-161b250687687e699b40"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Sintomas moderados, hipotenso, 70 anos: 3+0+4+4+3+3+0 = 17",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "No es de bajo riesgo (< 21 puntos)",
+            "locale": "es",
+            "template": "documented-authored-892f456a9a6013b5c444"
+          },
+          "note": {
+            "text": "Ingresar e iniciar antibiótico intravenoso de amplio espectro.",
+            "locale": "es",
+            "template": "documented-authored-3ddaa05760eea456ff96"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "fr": [
+      {
+        "name": "Sintomas leves, sem outros fatores, 55 anos, ambulatorial: 26 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Faible risque (≥ 21 points)",
+            "locale": "fr",
+            "template": "documented-authored-ae640d5324f303415705"
+          },
+          "note": {
+            "text": "Candidat à un antibiotique oral et à une prise en charge ambulatoire, s’il remplit aussi les critères cliniques et sociaux.",
+            "locale": "fr",
+            "template": "documented-authored-161b250687687e699b40"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Corte: sintomas moderados, febre na internação, &lt; 60 anos: 3+5+4+4+3+0+2 = 21",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Faible risque (≥ 21 points)",
+            "locale": "fr",
+            "template": "documented-authored-ae640d5324f303415705"
+          },
+          "note": {
+            "text": "Candidat à un antibiotique oral et à une prise en charge ambulatoire, s’il remplit aussi les critères cliniques et sociaux.",
+            "locale": "fr",
+            "template": "documented-authored-161b250687687e699b40"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Sintomas moderados, hipotenso, 70 anos: 3+0+4+4+3+3+0 = 17",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "N’est pas à faible risque (< 21 points)",
+            "locale": "fr",
+            "template": "documented-authored-892f456a9a6013b5c444"
+          },
+          "note": {
+            "text": "Hospitaliser et débuter un antibiotique intraveineux à large spectre.",
+            "locale": "fr",
+            "template": "documented-authored-3ddaa05760eea456ff96"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "de": [
+      {
+        "name": "Sintomas leves, sem outros fatores, 55 anos, ambulatorial: 26 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Niedriges Risiko (≥ 21 Punkte)",
+            "locale": "de",
+            "template": "documented-authored-ae640d5324f303415705"
+          },
+          "note": {
+            "text": "Kandidat für ein orales Antibiotikum und ambulantes Management, sofern auch die klinischen und sozialen Kriterien erfüllt sind.",
+            "locale": "de",
+            "template": "documented-authored-161b250687687e699b40"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Corte: sintomas moderados, febre na internação, &lt; 60 anos: 3+5+4+4+3+0+2 = 21",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Niedriges Risiko (≥ 21 Punkte)",
+            "locale": "de",
+            "template": "documented-authored-ae640d5324f303415705"
+          },
+          "note": {
+            "text": "Kandidat für ein orales Antibiotikum und ambulantes Management, sofern auch die klinischen und sozialen Kriterien erfüllt sind.",
+            "locale": "de",
+            "template": "documented-authored-161b250687687e699b40"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Sintomas moderados, hipotenso, 70 anos: 3+0+4+4+3+3+0 = 17",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Nicht niedriges Risiko (< 21 Punkte)",
+            "locale": "de",
+            "template": "documented-authored-892f456a9a6013b5c444"
+          },
+          "note": {
+            "text": "Aufnehmen und Breitbandantibiotikum intravenös beginnen.",
+            "locale": "de",
+            "template": "documented-authored-3ddaa05760eea456ff96"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "it": [
+      {
+        "name": "Sintomas leves, sem outros fatores, 55 anos, ambulatorial: 26 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Basso rischio (≥ 21 punti)",
+            "locale": "it",
+            "template": "documented-authored-ae640d5324f303415705"
+          },
+          "note": {
+            "text": "Candidato per antibiotico orale e gestione ambulatoriale, se soddisfa anche i criteri clinici e sociali.",
+            "locale": "it",
+            "template": "documented-authored-161b250687687e699b40"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Corte: sintomas moderados, febre na internação, &lt; 60 anos: 3+5+4+4+3+0+2 = 21",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Basso rischio (≥ 21 punti)",
+            "locale": "it",
+            "template": "documented-authored-ae640d5324f303415705"
+          },
+          "note": {
+            "text": "Candidato per antibiotico orale e gestione ambulatoriale, se soddisfa anche i criteri clinici e sociali.",
+            "locale": "it",
+            "template": "documented-authored-161b250687687e699b40"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Sintomas moderados, hipotenso, 70 anos: 3+0+4+4+3+3+0 = 17",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Non è a basso rischio (< 21 punti)",
+            "locale": "it",
+            "template": "documented-authored-892f456a9a6013b5c444"
+          },
+          "note": {
+            "text": "Ricoverare e iniziare un antibiotico endovenoso ad ampio spettro.",
+            "locale": "it",
+            "template": "documented-authored-3ddaa05760eea456ff96"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "name": "Sintomas leves, sem outros fatores, 55 anos, ambulatorial: 26 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "خطورة منخفضة (≥ 21 نقطة)",
+            "locale": "ar",
+            "template": "documented-authored-ae640d5324f303415705"
+          },
+          "note": {
+            "text": "مرشح لمضاد حيوي فموي وتدبير خارجي، إذا استوفى أيضًا المعايير السريرية والاجتماعية.",
+            "locale": "ar",
+            "template": "documented-authored-161b250687687e699b40"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Corte: sintomas moderados, febre na internação, &lt; 60 anos: 3+5+4+4+3+0+2 = 21",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "خطورة منخفضة (≥ 21 نقطة)",
+            "locale": "ar",
+            "template": "documented-authored-ae640d5324f303415705"
+          },
+          "note": {
+            "text": "مرشح لمضاد حيوي فموي وتدبير خارجي، إذا استوفى أيضًا المعايير السريرية والاجتماعية.",
+            "locale": "ar",
+            "template": "documented-authored-161b250687687e699b40"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Sintomas moderados, hipotenso, 70 anos: 3+0+4+4+3+3+0 = 17",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "ليس منخفض الخطورة (< 21 نقطة)",
+            "locale": "ar",
+            "template": "documented-authored-892f456a9a6013b5c444"
+          },
+          "note": {
+            "text": "أدخِل المريض وابدأ مضادًا حيويًا وريديًا واسع الطيف.",
+            "locale": "ar",
+            "template": "documented-authored-3ddaa05760eea456ff96"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "zh": [
+      {
+        "name": "Sintomas leves, sem outros fatores, 55 anos, ambulatorial: 26 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "低风险（≥ 21分）",
+            "locale": "zh",
+            "template": "documented-authored-ae640d5324f303415705"
+          },
+          "note": {
+            "text": "如同时满足临床和社会标准，则可考虑口服抗生素及门诊处理。",
+            "locale": "zh",
+            "template": "documented-authored-161b250687687e699b40"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Corte: sintomas moderados, febre na internação, &lt; 60 anos: 3+5+4+4+3+0+2 = 21",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "低风险（≥ 21分）",
+            "locale": "zh",
+            "template": "documented-authored-ae640d5324f303415705"
+          },
+          "note": {
+            "text": "如同时满足临床和社会标准，则可考虑口服抗生素及门诊处理。",
+            "locale": "zh",
+            "template": "documented-authored-161b250687687e699b40"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Sintomas moderados, hipotenso, 70 anos: 3+0+4+4+3+3+0 = 17",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "非低风险（< 21分）",
+            "locale": "zh",
+            "template": "documented-authored-892f456a9a6013b5c444"
+          },
+          "note": {
+            "text": "住院并开始广谱静脉抗生素。",
+            "locale": "zh",
+            "template": "documented-authored-3ddaa05760eea456ff96"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ja": [
+      {
+        "name": "Sintomas leves, sem outros fatores, 55 anos, ambulatorial: 26 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "低リスク（≥ 21点）",
+            "locale": "ja",
+            "template": "documented-authored-ae640d5324f303415705"
+          },
+          "note": {
+            "text": "臨床的および社会的基準も満たす場合、経口抗菌薬と外来管理の候補。",
+            "locale": "ja",
+            "template": "documented-authored-161b250687687e699b40"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Corte: sintomas moderados, febre na internação, &lt; 60 anos: 3+5+4+4+3+0+2 = 21",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "低リスク（≥ 21点）",
+            "locale": "ja",
+            "template": "documented-authored-ae640d5324f303415705"
+          },
+          "note": {
+            "text": "臨床的および社会的基準も満たす場合、経口抗菌薬と外来管理の候補。",
+            "locale": "ja",
+            "template": "documented-authored-161b250687687e699b40"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Sintomas moderados, hipotenso, 70 anos: 3+0+4+4+3+3+0 = 17",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "低リスクではない（< 21点）",
+            "locale": "ja",
+            "template": "documented-authored-892f456a9a6013b5c444"
+          },
+          "note": {
+            "text": "入院させ、広域スペクトルの静脈内抗菌薬を開始する。",
+            "locale": "ja",
+            "template": "documented-authored-3ddaa05760eea456ff96"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "hi": [
+      {
+        "name": "Sintomas leves, sem outros fatores, 55 anos, ambulatorial: 26 pontos",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "कम जोखिम (≥ 21 अंक)",
+            "locale": "hi",
+            "template": "documented-authored-ae640d5324f303415705"
+          },
+          "note": {
+            "text": "यदि नैदानिक और सामाजिक मानदंड भी पूरे हों, तो मौखिक एंटीबायोटिक और आउटपेशेंट प्रबंधन का उम्मीदवार।",
+            "locale": "hi",
+            "template": "documented-authored-161b250687687e699b40"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Corte: sintomas moderados, febre na internação, &lt; 60 anos: 3+5+4+4+3+0+2 = 21",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "कम जोखिम (≥ 21 अंक)",
+            "locale": "hi",
+            "template": "documented-authored-ae640d5324f303415705"
+          },
+          "note": {
+            "text": "यदि नैदानिक और सामाजिक मानदंड भी पूरे हों, तो मौखिक एंटीबायोटिक और आउटपेशेंट प्रबंधन का उम्मीदवार।",
+            "locale": "hi",
+            "template": "documented-authored-161b250687687e699b40"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Sintomas moderados, hipotenso, 70 anos: 3+0+4+4+3+3+0 = 17",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "कम जोखिम नहीं है (< 21 अंक)",
+            "locale": "hi",
+            "template": "documented-authored-892f456a9a6013b5c444"
+          },
+          "note": {
+            "text": "अस्पताल में भर्ती करें और व्यापक-स्पेक्ट्रम अंतःशिरा एंटीबायोटिक शुरू करें।",
+            "locale": "hi",
+            "template": "documented-authored-3ddaa05760eea456ff96"
+          },
+          "level": "high"
+        }
+      }
+    ]
+  }
+}
